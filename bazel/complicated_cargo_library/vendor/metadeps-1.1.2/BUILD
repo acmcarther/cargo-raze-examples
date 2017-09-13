@@ -5,15 +5,53 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 """
 package(default_visibility = ["//bazel/complicated_cargo_library:__subpackages__"])
 
-load("@io_bazel_rules_raze//raze:raze.bzl", "cargo_library")
-load(":Crate.bzl", "description")
-load("//bazel/complicated_cargo_library:Cargo.bzl", "workspace")
-load("//bazel/complicated_cargo_library:CargoOverrides.bzl", "override_cfg")
+load(
+    "@io_bazel_rules_rust//rust:rust.bzl",
+    "rust_library",
+    "rust_binary",
+    "rust_test",
+    "rust_bench_test",
+)
 
-cargo_library(
-    srcs = glob(["lib.rs", "src/**/*.rs"]),
-    crate_bzl = description,
-    cargo_override_bzl = override_cfg,
-    platform = workspace.platform,
-    workspace_path = "//bazel/complicated_cargo_library/"
+
+rust_library(
+    name = "metadeps",
+    crate_root = "src/lib.rs",
+    srcs = glob(["**/*.rs"]),
+    deps = [
+    "//bazel/complicated_cargo_library/vendor/error-chain-0.10.0:error_chain",
+    "//bazel/complicated_cargo_library/vendor/pkg-config-0.3.9:pkg_config",
+    "//bazel/complicated_cargo_library/vendor/toml-0.2.1:toml",
+    ],
+    rustc_flags = [
+        "--cap-lints allow",
+        "--target=x86_64-unknown-linux-gnu",
+    ],
+    
+    crate_features = [
+      
+    ],
+)
+# NOTE: Test may not function correctly: Development dependencies will be absent
+# TODO(acmcarther/cargo-raze/issues/7): Extend this with dev dependencies
+rust_test(
+    name = "test",
+    crate_root = "tests/test.rs",
+    srcs = glob(["**/*.rs"]),
+    deps = [
+    ":metadeps",
+    "//bazel/complicated_cargo_library/vendor/error-chain-0.10.0:error_chain",
+    "//bazel/complicated_cargo_library/vendor/pkg-config-0.3.9:pkg_config",
+    "//bazel/complicated_cargo_library/vendor/toml-0.2.1:toml",
+    
+    ],
+    rustc_flags = [
+        "--cap-lints allow",
+        "--target=x86_64-unknown-linux-gnu",
+    ],
+    
+    crate_features = [
+      
+    ],
+    visibility = ["//visibility:private"],
 )

@@ -5,15 +5,70 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 """
 package(default_visibility = ["//bazel/hello_cargo_library:__subpackages__"])
 
-load("@io_bazel_rules_raze//raze:raze.bzl", "cargo_library")
-load(":Crate.bzl", "description")
-load("//bazel/hello_cargo_library:Cargo.bzl", "workspace")
-load("//bazel/hello_cargo_library:CargoOverrides.bzl", "override_cfg")
+load(
+    "@io_bazel_rules_rust//rust:rust.bzl",
+    "rust_library",
+    "rust_binary",
+    "rust_test",
+    "rust_bench_test",
+)
 
-cargo_library(
-    srcs = glob(["lib.rs", "src/**/*.rs"]),
-    crate_bzl = description,
-    cargo_override_bzl = override_cfg,
-    platform = workspace.platform,
-    workspace_path = "//bazel/hello_cargo_library/"
+
+# NOTE: Test may not function correctly: Development dependencies will be absent
+# TODO(acmcarther/cargo-raze/issues/7): Extend this with dev dependencies
+rust_test(
+    name = "doc_test_copy",
+    crate_root = "tests/doc_test_copy.rs",
+    srcs = glob(["**/*.rs"]),
+    deps = [
+    ":fern",
+    "//bazel/hello_cargo_library/vendor/log-0.3.7:log",
+    
+    ],
+    rustc_flags = [
+        "--cap-lints allow",
+        "--target=x86_64-unknown-linux-gnu",
+    ],
+    
+    crate_features = [
+      
+    ],
+    visibility = ["//visibility:private"],
+)
+rust_library(
+    name = "fern",
+    crate_root = "src/lib.rs",
+    srcs = glob(["**/*.rs"]),
+    deps = [
+    "//bazel/hello_cargo_library/vendor/log-0.3.7:log",
+    ],
+    rustc_flags = [
+        "--cap-lints allow",
+        "--target=x86_64-unknown-linux-gnu",
+    ],
+    
+    crate_features = [
+      
+    ],
+)
+# NOTE: Test may not function correctly: Development dependencies will be absent
+# TODO(acmcarther/cargo-raze/issues/7): Extend this with dev dependencies
+rust_test(
+    name = "lib",
+    crate_root = "tests/lib.rs",
+    srcs = glob(["**/*.rs"]),
+    deps = [
+    ":fern",
+    "//bazel/hello_cargo_library/vendor/log-0.3.7:log",
+    
+    ],
+    rustc_flags = [
+        "--cap-lints allow",
+        "--target=x86_64-unknown-linux-gnu",
+    ],
+    
+    crate_features = [
+      
+    ],
+    visibility = ["//visibility:private"],
 )
