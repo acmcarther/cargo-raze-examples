@@ -3,7 +3,7 @@ cargo-raze crate build file.
 
 DO NOT EDIT! Replaced on runs of cargo-raze
 """
-package(default_visibility = ["//bazel/complicated_cargo_library:__subpackages__"])
+package(default_visibility = ["//complicated_cargo_library:__subpackages__"])
 
 load(
     "@io_bazel_rules_rust//rust:rust.bzl",
@@ -19,8 +19,8 @@ rust_library(
     crate_root = "src/lib.rs",
     srcs = glob(["**/*.rs"]),
     deps = [
-    "//bazel/complicated_cargo_library/vendor/thread-id-3.1.0:thread_id",
-    "//bazel/complicated_cargo_library/vendor/unreachable-0.1.1:unreachable",
+    "//complicated_cargo_library/vendor/thread-id-3.1.0:thread_id",
+    "//complicated_cargo_library/vendor/unreachable-0.1.1:unreachable",
     ],
     rustc_flags = [
         "--cap-lints allow",

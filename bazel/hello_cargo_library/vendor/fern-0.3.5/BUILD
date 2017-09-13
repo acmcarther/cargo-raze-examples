@@ -3,7 +3,7 @@ cargo-raze crate build file.
 
 DO NOT EDIT! Replaced on runs of cargo-raze
 """
-package(default_visibility = ["//bazel/hello_cargo_library:__subpackages__"])
+package(default_visibility = ["//hello_cargo_library:__subpackages__"])
 
 load(
     "@io_bazel_rules_rust//rust:rust.bzl",
@@ -22,7 +22,7 @@ rust_test(
     srcs = glob(["**/*.rs"]),
     deps = [
     ":fern",
-    "//bazel/hello_cargo_library/vendor/log-0.3.7:log",
+    "//hello_cargo_library/vendor/log-0.3.7:log",
     
     ],
     rustc_flags = [
@@ -40,7 +40,7 @@ rust_library(
     crate_root = "src/lib.rs",
     srcs = glob(["**/*.rs"]),
     deps = [
-    "//bazel/hello_cargo_library/vendor/log-0.3.7:log",
+    "//hello_cargo_library/vendor/log-0.3.7:log",
     ],
     rustc_flags = [
         "--cap-lints allow",
@@ -59,7 +59,7 @@ rust_test(
     srcs = glob(["**/*.rs"]),
     deps = [
     ":fern",
-    "//bazel/hello_cargo_library/vendor/log-0.3.7:log",
+    "//hello_cargo_library/vendor/log-0.3.7:log",
     
     ],
     rustc_flags = [
