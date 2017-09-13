@@ -6,9 +6,7 @@ function push_to_master() {
   COMMIT_HASH=$(cd ./scratch/cargo-raze && git rev-parse HEAD)
   SHORT_COMMIT_HASH=${COMMIT_HASH:0:6}
 
-  git add .
-  git commit -m "Update for cargo-raze#$SHORT_COMMIT_HASH"
-  git push origin master
+  (cd ../ && git add . && git commit -m "Update for cargo-raze#$SHORT_COMMIT_HASH" && git push origin master)
 }
 
 # Please run from the internal dir
