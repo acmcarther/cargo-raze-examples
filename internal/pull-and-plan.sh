@@ -18,7 +18,7 @@ function plan_bazel() {
   do
     rm ../bazel/$example_dir -rf || true
     cp "./sources/$example_dir" "../bazel/$example_dir" -r
-    (cd "../bazel/$example_dir" && cargo vendor -x ./vendor && ../../internal/scratch/raze raze //bazel/$example_dir --target "x86_64-unknown-linux-gnu")
+    (cd "../bazel/$example_dir" && cargo vendor -x ./vendor && ../../internal/scratch/raze raze //$example_dir --target "x86_64-unknown-linux-gnu")
   done
 }
 
