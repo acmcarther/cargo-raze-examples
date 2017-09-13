@@ -22,6 +22,12 @@ function plan_bazel() {
   done
 }
 
+function update_readme() {
+  COMMIT_HASH=$(cd ./scratch/cargo-raze && git rev-parse HEAD)
+  SHORT_COMMIT_HASH=${COMMIT_HASH:0:6}
+  LINE="Last run with [cargo-raze#$SHORT_COMMIT_HASH](http:\/\/github.com\/acmcarther\/cargo-raze\/commit\/$COMMIT_HASH) on `date +%Y-%m-%d`"
+  sed -i "s/^Last run with.*/$LINE/" ../README.md
+}
 
 # Please run from the internal dir
 if [[ ! "$PWD" =~ "cargo-raze-examples/internal" ]]; then
@@ -42,3 +48,4 @@ fi
 pull_raze_source
 build_raze
 plan_bazel
+update_readme
