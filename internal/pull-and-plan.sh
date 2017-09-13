@@ -32,17 +32,17 @@ function update_readme() {
 # Please run from the internal dir
 if [[ ! "$PWD" =~ "cargo-raze-examples/internal" ]]; then
   echo "Please run $0 from the internal directory"
-  exit
+  exit 1
 fi
 # Please install cargo.
 if [[ ! -x "$(command -v cargo)" ]]; then
   echo "Please install Cargo package manager the old fashioned way first."
-  exit
+  exit 1
 fi
 # Please install cargo-vendor (we depend on external cargo vendor for now).
 if [[ -z "$(cargo --list | grep 'vendor')" ]]; then
   echo "Please install cargo-vendor (\"cargo install cargo-vendor\") first."
-  exit
+  exit 1
 fi
 
 pull_raze_source
