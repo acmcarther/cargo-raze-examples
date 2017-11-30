@@ -19,14 +19,16 @@ rust_library(
     crate_root = "src/lib.rs",
     srcs = glob(["**/*.rs"]),
     deps = [
-    "//complicated_cargo_library/vendor/lazy_static-0.2.11:lazy_static",
-    "//complicated_cargo_library/vendor/unreachable-1.0.0:unreachable",
+        "//complicated_cargo_library/vendor/lazy_static-0.2.11:lazy_static",
+        "//complicated_cargo_library/vendor/unreachable-1.0.0:unreachable",
+        
     ],
     rustc_flags = [
         "--cap-lints allow",
         "--target=x86_64-unknown-linux-gnu",
+        
     ],
     crate_features = [
-      
+        
     ],
 )

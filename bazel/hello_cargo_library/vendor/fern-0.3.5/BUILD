@@ -19,14 +19,16 @@ rust_library(
     crate_root = "src/lib.rs",
     srcs = glob(["**/*.rs"]),
     deps = [
-    "//hello_cargo_library/vendor/log-0.3.7:log",
+        "//hello_cargo_library/vendor/log-0.3.7:log",
+        
     ],
     rustc_flags = [
         "--cap-lints allow",
         "--target=x86_64-unknown-linux-gnu",
+        
     ],
     crate_features = [
-      
+        
     ],
 )
 # Unsupported target "lib" with type "test" omitted

@@ -7,7 +7,7 @@ package(default_visibility = ["//visibility:public"])
 
 alias(
     name = "regex",
-    actual = "//complicated_cargo_library/vendor/regex-0.2.2:regex",
+    actual = "//complicated_cargo_library/vendor/regex-0.2.3:regex",
 )
 alias(
     name = "x11",

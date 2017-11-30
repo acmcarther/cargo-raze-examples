@@ -18,13 +18,15 @@ rust_library(
     crate_root = "src/lib.rs",
     srcs = glob(["**/*.rs"]),
     deps = [
-    "//complicated_cargo_library/vendor/void-1.0.2:void",
+        "//complicated_cargo_library/vendor/void-1.0.2:void",
+        
     ],
     rustc_flags = [
         "--cap-lints allow",
         "--target=x86_64-unknown-linux-gnu",
+        
     ],
     crate_features = [
-      
+        
     ],
 )

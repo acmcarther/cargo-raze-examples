@@ -20,14 +20,16 @@ rust_library(
     crate_root = "src/lib.rs",
     srcs = glob(["**/*.rs"]),
     deps = [
-    
+        
+        
     ],
     rustc_flags = [
         "--cap-lints allow",
         "--target=x86_64-unknown-linux-gnu",
+        
     ],
     crate_features = [
-      
+        
     ],
 )
 # Unsupported target "quick_main" with type "test" omitted

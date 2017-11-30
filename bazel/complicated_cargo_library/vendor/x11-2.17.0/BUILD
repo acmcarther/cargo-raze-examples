@@ -20,14 +20,16 @@ rust_library(
     crate_root = "src/lib.rs",
     srcs = glob(["**/*.rs"]),
     deps = [
-    "//complicated_cargo_library/vendor/libc-0.2.33:libc",
+        "//complicated_cargo_library/vendor/libc-0.2.34:libc",
+        
     ],
     rustc_flags = [
         "--cap-lints allow",
         "--target=x86_64-unknown-linux-gnu",
+        
     ],
     crate_features = [
-      
+        
     ],
 )
 # Unsupported target "xrecord" with type "example" omitted

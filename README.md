@@ -1,6 +1,6 @@
 # cargo-raze-examples
 
-Last run with [cargo-raze#2aee97](http://github.com/acmcarther/cargo-raze/commit/2aee976471fa86b7f9d2ddf051bde163072c082f) on 2017-11-29
+Last run with [cargo-raze#a45683](http://github.com/acmcarther/cargo-raze/commit/a45683390740ce9c3147c295c9fbbf82b302b1c3) on 2017-11-30
 
 This is a repo with a selection of examples using cargo-raze. See the
 tool-specific directories for details.
