@@ -7,7 +7,7 @@ regex = "0.2.2"
 x11 = "2.14.0"
 
 [raze]
-vendor_path = "//complicated_cargo_library"
+workspace_path = "//complicated_cargo_library"
 target = "x86_64-unknown-linux-gnu"
 
 [raze.crates.regex.'0.2.2']
