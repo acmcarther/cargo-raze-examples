@@ -11,5 +11,5 @@ alias(
 )
 alias(
     name = "x11",
-    actual = "//complicated_cargo_library/vendor/x11-2.14.0:x11",
+    actual = "//complicated_cargo_library/vendor/x11-2.17.0:x11",
 )

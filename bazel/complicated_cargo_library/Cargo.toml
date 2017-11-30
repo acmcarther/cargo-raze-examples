@@ -1,11 +1,17 @@
 [package]
 name = "compile_with_bazel"
 version = "0.1.0"
-authors = ["Alex McArther <acmcarther@gmail.com>"]
 
 [dependencies]
 regex = "0.2.2"
 x11 = "2.14.0"
 
-[lib]
-path = "fake_lib.rs"
+[raze]
+vendor_path = "//complicated_cargo_library"
+target = "x86_64-unknown-linux-gnu"
+
+[raze.crates.regex.'0.2.2']
+additional_deps = [
+  # Add an unused dep
+  "//complicated_cargo_library/vendor:x11"
+]
