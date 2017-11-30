@@ -9,3 +9,7 @@ fern = "0.3.5"
 
 [lib]
 path = "fake_lib.rs"
+
+[raze]
+vendor_path = "//hello_cargo_library"
+target = "x86_64-unknown-linux-gnu"
