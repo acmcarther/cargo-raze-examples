@@ -31,12 +31,12 @@ rust_library(
         "//complicated_cargo_library/vendor/regex-syntax-0.4.1:regex_syntax",
         "//complicated_cargo_library/vendor/thread_local-0.3.4:thread_local",
         "//complicated_cargo_library/vendor/utf8-ranges-1.0.0:utf8_ranges",
-        
+        "//complicated_cargo_library/vendor:x11",
     ],
     rustc_flags = [
         "--cap-lints allow",
         "--target=x86_64-unknown-linux-gnu",
-        
+        "--cfg=not_used",
     ],
     crate_features = [
         
