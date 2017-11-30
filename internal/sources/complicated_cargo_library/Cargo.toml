@@ -15,3 +15,7 @@ additional_deps = [
   # Add an unused dep
   "//complicated_cargo_library/vendor:x11"
 ]
+additional_flags = [
+  # Add an unused flag
+  "--cfg=not_used"
+]
