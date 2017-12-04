@@ -13,6 +13,7 @@ load(
     "rust_bench_test",
 )
 
+
 rust_binary(
     name = "aho_corasick_dot",
     crate_root = "src/main.rs",
@@ -26,6 +27,7 @@ rust_binary(
         "--target=x86_64-unknown-linux-gnu",
         
     ],
+    
     crate_features = [
         
     ],
@@ -43,6 +45,7 @@ rust_library(
         "--target=x86_64-unknown-linux-gnu",
         
     ],
+    
     crate_features = [
         
     ],
