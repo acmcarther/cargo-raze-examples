@@ -19,3 +19,7 @@ additional_flags = [
   # Add an unused flag
   "--cfg=not_used"
 ]
+
+[raze.crates.x11.'2.17.0']
+gen_buildrs = true
+
