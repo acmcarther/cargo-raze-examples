@@ -17,6 +17,7 @@ load(
 rust_library(
     name = "unreachable",
     crate_root = "src/lib.rs",
+    crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
         "//complicated_cargo_library/vendor/void-1.0.2:void",

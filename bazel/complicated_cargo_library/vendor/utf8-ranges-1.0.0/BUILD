@@ -18,6 +18,7 @@ load(
 rust_library(
     name = "utf8_ranges",
     crate_root = "src/lib.rs",
+    crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
         

@@ -18,6 +18,7 @@ load(
 rust_library(
     name = "memchr",
     crate_root = "src/lib.rs",
+    crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
         "//complicated_cargo_library/vendor/libc-0.2.34:libc",

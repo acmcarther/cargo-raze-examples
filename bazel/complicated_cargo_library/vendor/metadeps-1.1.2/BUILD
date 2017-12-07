@@ -17,6 +17,7 @@ load(
 rust_library(
     name = "metadeps",
     crate_root = "src/lib.rs",
+    crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
         "//complicated_cargo_library/vendor/error-chain-0.10.0:error_chain",

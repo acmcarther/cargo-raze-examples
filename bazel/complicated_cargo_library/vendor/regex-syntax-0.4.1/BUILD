@@ -17,6 +17,7 @@ load(
 rust_library(
     name = "regex_syntax",
     crate_root = "src/lib.rs",
+    crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
         

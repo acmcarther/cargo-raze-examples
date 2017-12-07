@@ -35,6 +35,7 @@ rust_binary(
 rust_library(
     name = "aho_corasick",
     crate_root = "src/lib.rs",
+    crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
         "//complicated_cargo_library/vendor/memchr-2.0.1:memchr",

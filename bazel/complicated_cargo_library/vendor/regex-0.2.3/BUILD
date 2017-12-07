@@ -25,6 +25,7 @@ load(
 rust_library(
     name = "regex",
     crate_root = "src/lib.rs",
+    crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
         "//complicated_cargo_library/vendor/aho-corasick-0.6.4:aho_corasick",

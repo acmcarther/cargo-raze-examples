@@ -18,6 +18,7 @@ load(
 rust_library(
     name = "thread_local",
     crate_root = "src/lib.rs",
+    crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
         "//complicated_cargo_library/vendor/lazy_static-0.2.11:lazy_static",
