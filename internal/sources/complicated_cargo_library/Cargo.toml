@@ -5,6 +5,7 @@ version = "0.1.0"
 [dependencies]
 regex = "0.2.2"
 x11 = "2.14.0"
+specs = "0.10.0"
 
 [raze]
 workspace_path = "//complicated_cargo_library"
