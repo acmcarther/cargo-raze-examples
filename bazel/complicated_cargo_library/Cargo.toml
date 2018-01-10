@@ -3,7 +3,7 @@ name = "compile_with_bazel"
 version = "0.1.0"
 
 [dependencies]
-regex = "0.2.2"
+regex = "0.2.5"
 specs = "0.10.0"
 bindgen = "0.32.1"
 
@@ -11,10 +11,10 @@ bindgen = "0.32.1"
 workspace_path = "//complicated_cargo_library"
 target = "x86_64-unknown-linux-gnu"
 
-[raze.crates.regex.'0.2.3']
+[raze.crates.regex.'0.2.5']
 skipped_deps = [
   # This will break the regex crate
-  "regex-syntax-0.4.1"
+  "regex-syntax-0.4.2"
 ]
 additional_deps = [
   # Add an unused dep
