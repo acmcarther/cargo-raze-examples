@@ -4,23 +4,32 @@ version = "0.1.0"
 
 [dependencies]
 regex = "0.2.2"
-x11 = "2.14.0"
 specs = "0.10.0"
+bindgen = "0.32.1"
 
 [raze]
 workspace_path = "//complicated_cargo_library"
 target = "x86_64-unknown-linux-gnu"
 
 [raze.crates.regex.'0.2.3']
+skipped_deps = [
+  # This will break the regex crate
+  "regex-syntax-0.4.1"
+]
 additional_deps = [
   # Add an unused dep
-  "//complicated_cargo_library/vendor:x11"
+  "//complicated_cargo_library/vendor:specs"
 ]
 additional_flags = [
   # Add an unused flag
   "--cfg=not_used"
 ]
 
-[raze.crates.x11.'2.17.0']
+[raze.crates.clang-sys.'0.21.1']
 gen_buildrs = true
 
+[raze.crates.bindgen.'0.32.1']
+gen_buildrs = true
+extra_aliased_targets = [
+  "cargo_bin_bindgen"
+]

@@ -28,13 +28,13 @@ rust_library(
     crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
-        "//complicated_cargo_library/vendor/crossbeam-0.3.0:crossbeam",
+        "//complicated_cargo_library/vendor/crossbeam-0.3.2:crossbeam",
         "//complicated_cargo_library/vendor/derivative-1.0.0:derivative",
         "//complicated_cargo_library/vendor/fnv-1.0.6:fnv",
         "//complicated_cargo_library/vendor/hibitset-0.3.2:hibitset",
         "//complicated_cargo_library/vendor/mopa-0.2.2:mopa",
         "//complicated_cargo_library/vendor/rayon-0.8.2:rayon",
-        "//complicated_cargo_library/vendor/shred-0.5.0:shred",
+        "//complicated_cargo_library/vendor/shred-0.5.1:shred",
         "//complicated_cargo_library/vendor/shred-derive-0.3.0:shred_derive",
         "//complicated_cargo_library/vendor/tuple_utils-0.2.0:tuple_utils",
         

@@ -22,9 +22,9 @@ rust_library(
     deps = [
         "//complicated_cargo_library/vendor/coco-0.1.1:coco",
         "//complicated_cargo_library/vendor/lazy_static-0.2.11:lazy_static",
-        "//complicated_cargo_library/vendor/libc-0.2.34:libc",
-        "//complicated_cargo_library/vendor/num_cpus-1.7.0:num_cpus",
-        "//complicated_cargo_library/vendor/rand-0.3.18:rand",
+        "//complicated_cargo_library/vendor/libc-0.2.35:libc",
+        "//complicated_cargo_library/vendor/num_cpus-1.8.0:num_cpus",
+        "//complicated_cargo_library/vendor/rand-0.3.20:rand",
         
     ],
     rustc_flags = [

@@ -21,7 +21,7 @@ rust_library(
     crate_type = "lib",
     srcs = glob(["**/*.rs"]),
     deps = [
-        "//complicated_cargo_library/vendor/libc-0.2.34:libc",
+        "//complicated_cargo_library/vendor/libc-0.2.35:libc",
         
     ],
     rustc_flags = [

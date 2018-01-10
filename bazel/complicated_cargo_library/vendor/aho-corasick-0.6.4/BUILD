@@ -15,10 +15,14 @@ load(
 
 
 rust_binary(
-    name = "aho_corasick_dot",
+    # Prefix bin name to disambiguate from (probable) collision with lib name
+    # N.B.: The exact form of this is subject to change.
+    name = "cargo_bin_aho_corasick_dot",
     crate_root = "src/main.rs",
     srcs = glob(["**/*.rs"]),
     deps = [
+        # Binaries get an implicit dependency on their lib
+        ":aho_corasick",
         "//complicated_cargo_library/vendor/memchr-2.0.1:memchr",
         
     ],

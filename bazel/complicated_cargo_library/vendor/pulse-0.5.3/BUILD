@@ -23,7 +23,7 @@ rust_library(
     srcs = glob(["**/*.rs"]),
     deps = [
         "//complicated_cargo_library/vendor/atom-0.3.4:atom",
-        "//complicated_cargo_library/vendor/time-0.1.38:time",
+        "//complicated_cargo_library/vendor/time-0.1.39:time",
         
     ],
     rustc_flags = [
