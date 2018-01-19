@@ -12,8 +12,6 @@ load(
     "rust_test",
     "rust_bench_test",
 )
-
-
 # Unsupported target "backtrack" with type "test" omitted
 # Unsupported target "backtrack-bytes" with type "test" omitted
 # Unsupported target "backtrack-utf8bytes" with type "test" omitted
@@ -22,6 +20,7 @@ load(
 # Unsupported target "nfa" with type "test" omitted
 # Unsupported target "nfa-bytes" with type "test" omitted
 # Unsupported target "nfa-utf8bytes" with type "test" omitted
+
 rust_library(
     name = "regex",
     crate_root = "src/lib.rs",
@@ -30,6 +29,7 @@ rust_library(
     deps = [
         "//complicated_cargo_library/vendor/aho-corasick-0.6.4:aho_corasick",
         "//complicated_cargo_library/vendor/memchr-2.0.1:memchr",
+        "//complicated_cargo_library/vendor/regex-syntax-0.4.2:regex_syntax",
         "//complicated_cargo_library/vendor/thread_local-0.3.5:thread_local",
         "//complicated_cargo_library/vendor/utf8-ranges-1.0.0:utf8_ranges",
         "//complicated_cargo_library/vendor:specs",
@@ -39,11 +39,10 @@ rust_library(
         "--target=x86_64-unknown-linux-gnu",
         "--cfg=not_used",
     ],
-    
     crate_features = [
-        
     ],
 )
+
 # Unsupported target "shootout-regex-dna" with type "example" omitted
 # Unsupported target "shootout-regex-dna-bytes" with type "example" omitted
 # Unsupported target "shootout-regex-dna-cheat" with type "example" omitted
