@@ -13,6 +13,8 @@ load(
     "rust_bench_test",
 )
 
+
+
 rust_library(
     name = "winapi",
     crate_root = "src/lib.rs",
@@ -28,10 +30,12 @@ rust_library(
         "minwinbase",
         "minwindef",
         "ntdef",
+        "ntsecapi",
         "profileapi",
         "std",
         "sysinfoapi",
         "timezoneapi",
+        "winnt",
     ],
 )
 

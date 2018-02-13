@@ -13,6 +13,8 @@ load(
     "rust_bench_test",
 )
 
+
+
 rust_library(
     name = "rayon_core",
     crate_root = "src/lib.rs",
@@ -23,7 +25,7 @@ rust_library(
         "//complicated_cargo_library/vendor/lazy_static-0.2.11:lazy_static",
         "//complicated_cargo_library/vendor/libc-0.2.36:libc",
         "//complicated_cargo_library/vendor/num_cpus-1.8.0:num_cpus",
-        "//complicated_cargo_library/vendor/rand-0.3.20:rand",
+        "//complicated_cargo_library/vendor/rand-0.3.22:rand",
     ],
     rustc_flags = [
         "--cap-lints allow",

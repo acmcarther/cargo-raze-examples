@@ -12,6 +12,8 @@ load(
     "rust_test",
     "rust_bench_test",
 )
+
+
 rust_binary(
     # Prefix bin name to disambiguate from (probable) collision with lib name
     # N.B.: The exact form of this is subject to change.

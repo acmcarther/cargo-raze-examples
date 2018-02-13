@@ -24,7 +24,7 @@ rust_library(
         "@complicated__lazy_static__0_2_11//:lazy_static",
         "@complicated__libc__0_2_36//:libc",
         "@complicated__num_cpus__1_8_0//:num_cpus",
-        "@complicated__rand__0_3_20//:rand",
+        "@complicated__rand__0_3_22//:rand",
     ],
     rustc_flags = [
         "--cap-lints allow",

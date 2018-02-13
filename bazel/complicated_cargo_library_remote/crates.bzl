@@ -15,6 +15,14 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
+        name = "complicated__approx__0_1_1",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/approx/approx-0.1.1.crate",
+        type = "tar.gz",
+        strip_prefix = "approx-0.1.1",
+        build_file = "//complicated_cargo_library_remote:approx-0.1.1.BUILD"
+    )
+
+    native.new_http_archive(
         name = "complicated__arrayvec__0_3_25",
         url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/arrayvec/arrayvec-0.3.25.crate",
         type = "tar.gz",
@@ -36,6 +44,14 @@ def complicated_fetch_remote_crates():
         type = "tar.gz",
         strip_prefix = "bitflags-1.0.1",
         build_file = "//complicated_cargo_library_remote:bitflags-1.0.1.BUILD"
+    )
+
+    native.new_http_archive(
+        name = "complicated__cgmath__0_16_0",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/cgmath/cgmath-0.16.0.crate",
+        type = "tar.gz",
+        strip_prefix = "cgmath-0.16.0",
+        build_file = "//complicated_cargo_library_remote:cgmath-0.16.0.BUILD"
     )
 
     native.new_http_archive(
@@ -159,6 +175,22 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
+        name = "complicated__num_traits__0_1_43",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/num-traits/num-traits-0.1.43.crate",
+        type = "tar.gz",
+        strip_prefix = "num-traits-0.1.43",
+        build_file = "//complicated_cargo_library_remote:num-traits-0.1.43.BUILD"
+    )
+
+    native.new_http_archive(
+        name = "complicated__num_traits__0_2_0",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/num-traits/num-traits-0.2.0.crate",
+        type = "tar.gz",
+        strip_prefix = "num-traits-0.2.0",
+        build_file = "//complicated_cargo_library_remote:num-traits-0.2.0.BUILD"
+    )
+
+    native.new_http_archive(
         name = "complicated__num_cpus__1_8_0",
         url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/num_cpus/num_cpus-1.8.0.crate",
         type = "tar.gz",
@@ -191,11 +223,19 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
-        name = "complicated__rand__0_3_20",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rand/rand-0.3.20.crate",
+        name = "complicated__rand__0_3_22",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rand/rand-0.3.22.crate",
         type = "tar.gz",
-        strip_prefix = "rand-0.3.20",
-        build_file = "//complicated_cargo_library_remote:rand-0.3.20.BUILD"
+        strip_prefix = "rand-0.3.22",
+        build_file = "//complicated_cargo_library_remote:rand-0.3.22.BUILD"
+    )
+
+    native.new_http_archive(
+        name = "complicated__rand__0_4_2",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rand/rand-0.4.2.crate",
+        type = "tar.gz",
+        strip_prefix = "rand-0.4.2",
+        build_file = "//complicated_cargo_library_remote:rand-0.4.2.BUILD"
     )
 
     native.new_http_archive(
@@ -223,11 +263,11 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
-        name = "complicated__regex__0_2_5",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/regex/regex-0.2.5.crate",
+        name = "complicated__regex__0_2_6",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/regex/regex-0.2.6.crate",
         type = "tar.gz",
-        strip_prefix = "regex-0.2.5",
-        build_file = "//complicated_cargo_library_remote:regex-0.2.5.BUILD"
+        strip_prefix = "regex-0.2.6",
+        build_file = "//complicated_cargo_library_remote:regex-0.2.6.BUILD"
     )
 
     native.new_http_archive(

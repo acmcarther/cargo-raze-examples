@@ -5,8 +5,12 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 """
 package(default_visibility = ["//visibility:public"])
 alias(
+    name = "cgmath",
+    actual = "//complicated_cargo_library/vendor/cgmath-0.16.0:cgmath",
+)
+alias(
     name = "regex",
-    actual = "//complicated_cargo_library/vendor/regex-0.2.5:regex",
+    actual = "//complicated_cargo_library/vendor/regex-0.2.6:regex",
 )
 alias(
     name = "specs",

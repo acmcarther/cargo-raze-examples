@@ -4,6 +4,7 @@ rust_binary(
     name = "complicated_cargo_library",
     srcs = ["src/main.rs"],
     deps = [
+        "//complicated_cargo_library/vendor:cgmath",
         "//complicated_cargo_library/vendor:regex",
         "//complicated_cargo_library/vendor:specs",
     ],

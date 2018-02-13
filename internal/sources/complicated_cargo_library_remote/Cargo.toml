@@ -8,6 +8,7 @@ path = "fake_lib.rs"
 [dependencies]
 regex = "0.2.5"
 specs = "0.10.0"
+cgmath = "0.16.0"
 
 [raze]
 workspace_path = "//complicated_cargo_library_remote"
@@ -29,5 +30,5 @@ additional_flags = [
   "--cfg=not_used"
 ]
 
-[raze.crates.clang-sys.'0.21.1']
+[raze.crates.cgmath.'0.16.0']
 gen_buildrs = true
