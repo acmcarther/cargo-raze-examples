@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package interconnect;
+
+message FindServerRequest {
+}
+
+message FindServerResponse {
+  uint64 client_id = 1;
+  string session_addr = 2;
+}
+
+service GatewayService {
+  rpc FindServer(FindServerRequest) returns (FindServerResponse) {}
+}
