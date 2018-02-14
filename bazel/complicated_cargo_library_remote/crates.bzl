@@ -191,11 +191,19 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
-        name = "complicated__rand__0_3_20",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rand/rand-0.3.20.crate",
+        name = "complicated__rand__0_3_22",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rand/rand-0.3.22.crate",
         type = "tar.gz",
-        strip_prefix = "rand-0.3.20",
-        build_file = "//complicated_cargo_library_remote:rand-0.3.20.BUILD"
+        strip_prefix = "rand-0.3.22",
+        build_file = "//complicated_cargo_library_remote:rand-0.3.22.BUILD"
+    )
+
+    native.new_http_archive(
+        name = "complicated__rand__0_4_2",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rand/rand-0.4.2.crate",
+        type = "tar.gz",
+        strip_prefix = "rand-0.4.2",
+        build_file = "//complicated_cargo_library_remote:rand-0.4.2.BUILD"
     )
 
     native.new_http_archive(
@@ -223,11 +231,11 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
-        name = "complicated__regex__0_2_5",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/regex/regex-0.2.5.crate",
+        name = "complicated__regex__0_2_6",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/regex/regex-0.2.6.crate",
         type = "tar.gz",
-        strip_prefix = "regex-0.2.5",
-        build_file = "//complicated_cargo_library_remote:regex-0.2.5.BUILD"
+        strip_prefix = "regex-0.2.6",
+        build_file = "//complicated_cargo_library_remote:regex-0.2.6.BUILD"
     )
 
     native.new_http_archive(

@@ -29,10 +29,12 @@ rust_library(
         "minwinbase",
         "minwindef",
         "ntdef",
+        "ntsecapi",
         "profileapi",
         "std",
         "sysinfoapi",
         "timezoneapi",
+        "winnt",
     ],
 )
 
