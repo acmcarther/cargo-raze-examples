@@ -2,18 +2,16 @@
 name = "compile_with_bazel"
 version = "0.1.0"
 
-[lib]
-path = "fake_lib.rs"
-
 [dependencies]
 regex = "0.2.5"
 specs = "0.10.0"
 
+[lib]
+path = "fake_lib.rs"
+
 [raze]
-workspace_path = "//complicated_cargo_library_remote"
+workspace_path = "//complicated_cargo_library/cargo"
 target = "x86_64-unknown-linux-gnu"
-gen_workspace_prefix = "complicated"
-genmode = "Remote"
 
 [raze.crates.regex.'0.2.5']
 skipped_deps = [
@@ -22,7 +20,7 @@ skipped_deps = [
 ]
 additional_deps = [
   # Add an unused dep
-  "@complicated__specs__0_10_0//:specs"
+  "//complicated_cargo_library/cargo/vendor:specs"
 ]
 additional_flags = [
   # Add an unused flag
@@ -31,3 +29,4 @@ additional_flags = [
 
 [raze.crates.clang-sys.'0.21.1']
 gen_buildrs = true
+
