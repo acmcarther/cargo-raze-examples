@@ -5,7 +5,7 @@ set -e
 function pull_raze_source() {
   rm scratch -rf
   mkdir scratch
-  git clone git@github.com:acmcarther/cargo-raze scratch/cargo-raze
+  git clone git@github.com:google/cargo-raze scratch/cargo-raze
 }
 
 # Builds raze using cargo, and places binary into scratch
@@ -29,7 +29,7 @@ function plan_bazel() {
 function update_readme() {
   COMMIT_HASH=$(cd ./scratch/cargo-raze && git rev-parse HEAD)
   SHORT_COMMIT_HASH=${COMMIT_HASH:0:6}
-  LINE="Last run with [cargo-raze#$SHORT_COMMIT_HASH](http:\/\/github.com\/acmcarther\/cargo-raze\/commit\/$COMMIT_HASH) on `date +%Y-%m-%d`"
+  LINE="Last run with [cargo-raze#$SHORT_COMMIT_HASH](http:\/\/github.com\/google\/cargo-raze\/commit\/$COMMIT_HASH) on `date +%Y-%m-%d`"
   sed -i "s/^Last run with.*/$LINE/" ../README.md
 }
 
