@@ -23,6 +23,14 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
+        name = "complicated__arrayvec__0_4_7",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/arrayvec/arrayvec-0.4.7.crate",
+        type = "tar.gz",
+        strip_prefix = "arrayvec-0.4.7",
+        build_file = "//complicated_cargo_library_remote:arrayvec-0.4.7.BUILD"
+    )
+
+    native.new_http_archive(
         name = "complicated__atom__0_3_4",
         url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/atom/atom-0.3.4.crate",
         type = "tar.gz",
@@ -39,11 +47,11 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
-        name = "complicated__coco__0_1_1",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/coco/coco-0.1.1.crate",
+        name = "complicated__cfg_if__0_1_2",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/cfg-if/cfg-if-0.1.2.crate",
         type = "tar.gz",
-        strip_prefix = "coco-0.1.1",
-        build_file = "//complicated_cargo_library_remote:coco-0.1.1.BUILD"
+        strip_prefix = "cfg-if-0.1.2",
+        build_file = "//complicated_cargo_library_remote:cfg-if-0.1.2.BUILD"
     )
 
     native.new_http_archive(
@@ -52,6 +60,30 @@ def complicated_fetch_remote_crates():
         type = "tar.gz",
         strip_prefix = "crossbeam-0.3.2",
         build_file = "//complicated_cargo_library_remote:crossbeam-0.3.2.BUILD"
+    )
+
+    native.new_http_archive(
+        name = "complicated__crossbeam_deque__0_2_0",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/crossbeam-deque/crossbeam-deque-0.2.0.crate",
+        type = "tar.gz",
+        strip_prefix = "crossbeam-deque-0.2.0",
+        build_file = "//complicated_cargo_library_remote:crossbeam-deque-0.2.0.BUILD"
+    )
+
+    native.new_http_archive(
+        name = "complicated__crossbeam_epoch__0_3_0",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/crossbeam-epoch/crossbeam-epoch-0.3.0.crate",
+        type = "tar.gz",
+        strip_prefix = "crossbeam-epoch-0.3.0",
+        build_file = "//complicated_cargo_library_remote:crossbeam-epoch-0.3.0.BUILD"
+    )
+
+    native.new_http_archive(
+        name = "complicated__crossbeam_utils__0_2_2",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/crossbeam-utils/crossbeam-utils-0.2.2.crate",
+        type = "tar.gz",
+        strip_prefix = "crossbeam-utils-0.2.2",
+        build_file = "//complicated_cargo_library_remote:crossbeam-utils-0.2.2.BUILD"
     )
 
     native.new_http_archive(
@@ -143,6 +175,14 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
+        name = "complicated__memoffset__0_2_1",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/memoffset/memoffset-0.2.1.crate",
+        type = "tar.gz",
+        strip_prefix = "memoffset-0.2.1",
+        build_file = "//complicated_cargo_library_remote:memoffset-0.2.1.BUILD"
+    )
+
+    native.new_http_archive(
         name = "complicated__mopa__0_2_2",
         url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/mopa/mopa-0.2.2.crate",
         type = "tar.gz",
@@ -191,11 +231,11 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
-        name = "complicated__rand__0_3_20",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rand/rand-0.3.20.crate",
+        name = "complicated__rand__0_4_2",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rand/rand-0.4.2.crate",
         type = "tar.gz",
-        strip_prefix = "rand-0.3.20",
-        build_file = "//complicated_cargo_library_remote:rand-0.3.20.BUILD"
+        strip_prefix = "rand-0.4.2",
+        build_file = "//complicated_cargo_library_remote:rand-0.4.2.BUILD"
     )
 
     native.new_http_archive(
@@ -207,11 +247,11 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
-        name = "complicated__rayon_core__1_3_0",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rayon-core/rayon-core-1.3.0.crate",
+        name = "complicated__rayon_core__1_4_0",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/rayon-core/rayon-core-1.4.0.crate",
         type = "tar.gz",
-        strip_prefix = "rayon-core-1.3.0",
-        build_file = "//complicated_cargo_library_remote:rayon-core-1.3.0.BUILD"
+        strip_prefix = "rayon-core-1.4.0",
+        build_file = "//complicated_cargo_library_remote:rayon-core-1.4.0.BUILD"
     )
 
     native.new_http_archive(
@@ -223,11 +263,11 @@ def complicated_fetch_remote_crates():
     )
 
     native.new_http_archive(
-        name = "complicated__regex__0_2_5",
-        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/regex/regex-0.2.5.crate",
+        name = "complicated__regex__0_2_6",
+        url = "https://crates-io.s3-us-west-1.amazonaws.com/crates/regex/regex-0.2.6.crate",
         type = "tar.gz",
-        strip_prefix = "regex-0.2.5",
-        build_file = "//complicated_cargo_library_remote:regex-0.2.5.BUILD"
+        strip_prefix = "regex-0.2.6",
+        build_file = "//complicated_cargo_library_remote:regex-0.2.6.BUILD"
     )
 
     native.new_http_archive(

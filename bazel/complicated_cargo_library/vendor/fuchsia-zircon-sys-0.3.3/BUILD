@@ -5,6 +5,10 @@ DO NOT EDIT! Replaced on runs of cargo-raze
 """
 package(default_visibility = ["//complicated_cargo_library:__subpackages__"])
 
+licenses([
+  "notice", # "BSD-3-Clause"
+])
+
 load(
     "@io_bazel_rules_rust//rust:rust.bzl",
     "rust_library",

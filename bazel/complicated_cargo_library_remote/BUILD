@@ -7,7 +7,7 @@ package(default_visibility = ["//visibility:public"])
 
 alias(
     name = "regex",
-    actual = "@complicated__regex__0_2_5//:regex",
+    actual = "@complicated__regex__0_2_6//:regex",
 )
 alias(
     name = "specs",
