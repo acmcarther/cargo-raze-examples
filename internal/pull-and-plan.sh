@@ -19,9 +19,9 @@ function plan_bazel() {
     rm ../bazel/$example_dir -rf || true
     cp "./sources/$example_dir" "../bazel/$example_dir" -r
     if [[ $example_dir = *_remote ]]; then
-      (cd "../bazel/$example_dir/cargo" && ../../internal/scratch/raze raze)
+      (cd "../bazel/$example_dir/cargo" && ../../../internal/scratch/raze raze)
     else
-      (cd "../bazel/$example_dir/cargo" && cargo vendor -x ./vendor && ../../internal/scratch/raze raze)
+      (cd "../bazel/$example_dir/cargo" && cargo vendor -x ./vendor && ../../../internal/scratch/raze raze)
     fi
   done
 }
