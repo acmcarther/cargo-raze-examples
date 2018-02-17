@@ -4,7 +4,7 @@ rust_binary(
     name = "hello_cargo_library",
     srcs = ["src/main.rs"],
     deps = [
-        "//hello_cargo_library/vendor:fern",
-        "//hello_cargo_library/vendor:log",
+        "//hello_cargo_library/cargo:fern",
+        "//hello_cargo_library/cargo:log",
     ],
 )
