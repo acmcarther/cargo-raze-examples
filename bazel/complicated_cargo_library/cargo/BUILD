@@ -9,6 +9,10 @@ licenses([
   "notice" # See individual crates for specific licenses
 ])
 alias(
+    name = "conduit_mime_types",
+    actual = "//complicated_cargo_library/cargo/vendor/conduit-mime-types-0.7.3:conduit_mime_types",
+)
+alias(
     name = "regex",
     actual = "//complicated_cargo_library/cargo/vendor/regex-0.2.6:regex",
 )
