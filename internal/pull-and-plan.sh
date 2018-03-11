@@ -23,6 +23,11 @@ function plan_bazel() {
     else
       (cd "../bazel/$example_dir/cargo" && cargo vendor -x ./vendor && ../../../internal/scratch/raze raze)
     fi
+
+    if [[ $( cd ../bazel/$example_dir && ./sanity_check.sh) ]]; then
+      echo "Sanity check failed for $example_dir"
+      exit 1
+    fi
   done
 }
 
