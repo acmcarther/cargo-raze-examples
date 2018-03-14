@@ -25,4 +25,4 @@ rust:
   - stable
 
 script:
-  - cd ./internal && evaluate-local-raze.sh
+  - cd ./internal && ./evaluate-local-raze.sh

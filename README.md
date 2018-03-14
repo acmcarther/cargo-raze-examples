@@ -8,3 +8,7 @@ tool-specific directories for details.
 ## Updating
 
 From `internal`, run `pull-and-plan.sh`.
+
+## Testing locally
+
+From `internal`, run `evaluate-local-raze.sh`.
