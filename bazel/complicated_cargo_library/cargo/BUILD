@@ -9,6 +9,10 @@ licenses([
   "notice" # See individual crates for specific licenses
 ])
 alias(
+    name = "bigint",
+    actual = "//complicated_cargo_library/cargo/vendor/bigint-4.2.0:bigint",
+)
+alias(
     name = "conduit_mime_types",
     actual = "//complicated_cargo_library/cargo/vendor/conduit-mime-types-0.7.3:conduit_mime_types",
 )
