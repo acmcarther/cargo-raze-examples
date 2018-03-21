@@ -5,8 +5,11 @@ version = "0.1.0"
 [dependencies]
 regex = "0.2.5"
 specs = "0.10.0"
-conduit-mime-types = "0.7.3"
-
+# Evaluate data_attr
+conduit-mime-types = "=0.7.3"
+# Evaluate RUSTC build script flag
+# ... via build dep on rustc_version
+bigint = "=4.2.0"
 
 [lib]
 path = "fake_lib.rs"
@@ -29,7 +32,10 @@ additional_flags = [
   "--cfg=not_used"
 ]
 
-[raze.crates.clang-sys.'0.21.1']
+[raze.crates.bigint.'4.2.0']
+gen_buildrs = true
+
+[raze.crates.crunchy.'0.1.6']
 gen_buildrs = true
 
 [raze.crates.conduit-mime-types.'0.7.3']
